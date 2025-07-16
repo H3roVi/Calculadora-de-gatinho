@@ -57,38 +57,33 @@ display = ctk.CTkEntry(janela, textvariable=valor_texto, width=310, height=90,
                        font=("Ivy", 24), justify="right", fg_color="#5754F7", text_color="#FFFFFF")
 display.place(x=6, y=5)
 
-# Função de criação de botões
+# criação de botões
 def botao(txt, cmd, x, y, w=60, h=60, bg="#FFFFFF", fg="#000000"):
     btn = ctk.CTkButton(janela, text=txt, command=cmd, width=w, height=h,
                         corner_radius=30, fg_color=bg, text_color=fg, font=("Ivy", 18, "bold"))
     btn.place(x=x, y=y)
 
 # Botões
-# Linha 1
 botao("C", limpar_tela, 6, 100)
 botao("%", lambda: entrar_valores('%'), 83, 100)
 botao("/", lambda: entrar_valores('/'), 160, 100)
 botao("*", lambda: entrar_valores('*'), 237, 100, bg="#F805E4")
 
-# Linha 2
 botao("7", lambda: entrar_valores('7'), 6, 170)
 botao("8", lambda: entrar_valores('8'), 83, 170)
 botao("9", lambda: entrar_valores('9'), 160, 170)
 botao("-", lambda: entrar_valores('-'), 237, 170, bg="#F805E4")
 
-# Linha 3
 botao("4", lambda: entrar_valores('4'), 6, 240)
 botao("5", lambda: entrar_valores('5'), 83, 240)
 botao("6", lambda: entrar_valores('6'), 160, 240)
 botao("+", lambda: entrar_valores('+'), 237, 240, bg="#F805E4")
 
-# Linha 4
 botao("1", lambda: entrar_valores('1'), 6, 310)
 botao("2", lambda: entrar_valores('2'), 83, 310)
 botao("3", lambda: entrar_valores('3'), 160, 310)
 botao("🐾", calcular, 237, 310, h=130, bg="#F805E4")
 
-# Linha 5
 botao("0", lambda: entrar_valores('0'), 6, 380, w=137)
 botao(".", lambda: entrar_valores('.'), 160, 380)
 
